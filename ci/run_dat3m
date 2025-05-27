@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+set -ex
+
+IMG=dat3m:latest
+
+(
+  cd ci
+  docker buildx build -t $IMG -f dat3m_dockerfile .
+)
+
+docker run \
+  -it \
+  -u $(id -u):$(id -g) \
+  -v $(pwd):/src \
+  -w /src \
+  $IMG \
+  bash -c "set -ex && DAT3M_OUTPUT=/src/target_dartagnan java -jar /home/Dat3M/dartagnan/target/dartagnan.jar /src/model/rc11.cat /src/tests/gonzalo/mp/mp-sna-frel-srlx-lrlx-facq-lna.litmus"
+ 

@@ -1,0 +1,22 @@
+FROM ubuntu:20.04
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+# Update Ubuntu Software repository
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y software-properties-common git graphviz sudo wget maven openjdk-17-jdk openjdk-17-jre graphviz z3
+
+# Install Dat3M
+RUN cd home && \
+    git clone --branch development https://github.com/hernanponcedeleon/Dat3M.git && \
+    cd Dat3M && \
+    mvn clean install -DskipTests
+
+# symlink for clang
+RUN ln -s clang-12 /usr/bin/clang
+
+ENV DAT3M_HOME=/home/Dat3M
+ENV DAT3M_OUTPUT=/src/target_dat3m
+ENV CFLAGS="-I$DAT3M_HOME/include"
+ENV OPTFLAGS="-mem2reg -sroa -early-cse -indvars -loop-unroll -fix-irreducible -loop-simplify -simplifycfg -gvn"
