@@ -1,21 +1,20 @@
 Test z6.u Allowed
-States 12
+States 11
 1:b=0; 1:c=1; 2:a=0;
 1:b=0; 1:c=1; 2:a=1;
 1:b=0; 1:c=3; 2:a=0;
 1:b=0; 1:c=3; 2:a=1;
 1:b=1; 1:c=2; 2:a=0;
 1:b=1; 1:c=2; 2:a=1;
-1:b=1; 1:c=3; 2:a=0;
 1:b=1; 1:c=3; 2:a=1;
 1:b=3; 1:c=1; 2:a=0;
 1:b=3; 1:c=1; 2:a=1;
 1:b=3; 1:c=4; 2:a=0;
 1:b=3; 1:c=4; 2:a=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 23
+Positive: 0 Negative: 18
 Condition exists (2:a=0 /\ 1:b=1 /\ 1:c=3)
-Observation z6.u Sometimes 1 23
+Observation z6.u Never 0 18
 Hash=cfc62c1993d060f8d29b77b3762a8440
 

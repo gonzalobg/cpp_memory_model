@@ -1,16 +1,15 @@
 Test oota-causality-3 Allowed
-States 7
+States 6
 0:r1=0; 0:r2=0; 1:r3=0;
 0:r1=0; 0:r2=0; 1:r3=1;
 0:r1=0; 0:r2=2; 1:r3=0;
-0:r1=1; 0:r2=1; 1:r3=1;
 0:r1=2; 0:r2=0; 1:r3=0;
 0:r1=2; 0:r2=2; 1:r3=0;
 0:r1=2; 0:r2=2; 1:r3=1;
-Ok
+No
 Witnesses
-Positive: 2 Negative: 16
+Positive: 0 Negative: 15
 Condition exists (0:r1=1 /\ 0:r2=1 /\ 1:r3=1)
-Observation oota-causality-3 Sometimes 2 16
+Observation oota-causality-3 Never 0 15
 Hash=9c951a4f024af759d19cdf71db576307
 

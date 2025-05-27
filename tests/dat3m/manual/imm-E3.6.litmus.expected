@@ -1,12 +1,11 @@
 Test imm-E3.6 Allowed
-States 3
+States 2
 0:r0=0; 0:r1=1; 1:r0=0;
 0:r0=0; 0:r1=1; 1:r0=1;
-0:r0=1; 0:r1=1; 1:r0=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 3
+Positive: 0 Negative: 3
 Condition exists (0:r0=1 /\ 0:r1=1 /\ 1:r0=1)
-Observation imm-E3.6 Sometimes 1 3
+Observation imm-E3.6 Never 0 3
 Hash=1489b81baf8f31ab9771ffd568a211a6
 

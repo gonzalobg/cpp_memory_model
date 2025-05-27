@@ -1,11 +1,10 @@
 Test oota-invent-int-load Allowed
-States 2
+States 1
 0:r0=0; 1:r1=0;
-0:r0=42; 1:r1=42;
-Ok
+No
 Witnesses
-Positive: 3 Negative: 5
+Positive: 0 Negative: 5
 Condition exists (0:r0=42 /\ 1:r1=42)
-Observation oota-invent-int-load Sometimes 3 5
+Observation oota-invent-int-load Never 0 5
 Hash=7d0246add471f86db0ece7949830873f
 

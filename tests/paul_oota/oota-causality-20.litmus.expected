@@ -1,13 +1,12 @@
 Test oota-causality-20 Allowed
-States 4
-0:r1=S8; 1:r2=S8; 2:r3=0;
+States 3
 0:r1=0; 1:r2=0; 2:r3=0;
 0:r1=42; 1:r2=0; 2:r3=0;
 0:r1=42; 1:r2=42; 2:r3=0;
 No
 Witnesses
-Positive: 0 Negative: 16
+Positive: 0 Negative: 13
 Condition exists (0:r1=42 /\ 1:r2=42 /\ 2:r3=42)
-Observation oota-causality-20 Never 0 16
+Observation oota-causality-20 Never 0 13
 Hash=4280adb1137a16d1eb21f939f679e417
 

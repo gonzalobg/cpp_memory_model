@@ -6,8 +6,8 @@ States 4
 0:r1=2; 0:r2=3; 1:r3=3;
 No
 Witnesses
-Positive: 0 Negative: 10
+Positive: 0 Negative: 9
 Condition exists (0:r1=1 /\ 0:r2=1)
-Observation oota-causality-9 Never 0 10
+Observation oota-causality-9 Never 0 9
 Hash=13118599aee16fff56561ba501927d6a
 

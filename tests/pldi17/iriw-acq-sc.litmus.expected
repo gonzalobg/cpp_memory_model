@@ -1,5 +1,5 @@
 Test iriw-acq-sc Allowed
-States 16
+States 15
 1:a=0; 1:c=0; 2:b=0; 2:d=0;
 1:a=0; 1:c=0; 2:b=0; 2:d=1;
 1:a=0; 1:c=0; 2:b=1; 2:d=0;
@@ -10,16 +10,15 @@ States 16
 1:a=0; 1:c=1; 2:b=1; 2:d=1;
 1:a=1; 1:c=0; 2:b=0; 2:d=0;
 1:a=1; 1:c=0; 2:b=0; 2:d=1;
-1:a=1; 1:c=0; 2:b=1; 2:d=0;
 1:a=1; 1:c=0; 2:b=1; 2:d=1;
 1:a=1; 1:c=1; 2:b=0; 2:d=0;
 1:a=1; 1:c=1; 2:b=0; 2:d=1;
 1:a=1; 1:c=1; 2:b=1; 2:d=0;
 1:a=1; 1:c=1; 2:b=1; 2:d=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 15
+Positive: 0 Negative: 15
 Condition exists (1:a=1 /\ 2:b=1 /\ 1:c=0 /\ 2:d=0)
-Observation iriw-acq-sc Sometimes 1 15
+Observation iriw-acq-sc Never 0 15
 Hash=4d114d7795fbcbbfdbcf4d86833bd7b9
 

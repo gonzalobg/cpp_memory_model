@@ -1,11 +1,10 @@
 Test cyc Allowed
-States 2
+States 1
 0:r0=0; 1:r1=0;
-0:r0=1; 1:r1=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 1
+Positive: 0 Negative: 1
 Condition exists (0:r0=1 /\ 1:r1=1)
-Observation cyc Sometimes 1 1
+Observation cyc Never 0 1
 Hash=d16e1b2160f9a55f0bb557046b596103
 

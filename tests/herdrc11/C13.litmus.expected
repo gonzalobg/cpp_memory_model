@@ -1,11 +1,10 @@
 Test C13 Allowed
-States 2
-0:r1=S13; 0:r2=S13; 1:r4=S13;
+States 1
 0:r1=0; 0:r2=0; 1:r4=0;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 3
+Positive: 0 Negative: 3
 Condition exists (not (0:r1=0))
-Observation C13 Sometimes 1 3
+Observation C13 Never 0 3
 Hash=70ddc011bf3f6c58e4434450a8a3440c
 
