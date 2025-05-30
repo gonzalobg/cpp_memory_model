@@ -1,12 +1,10 @@
 Test seq Allowed
-States 2
+States 1
 [a]=1; [x]=0; [y]=0;
-[a]=1; [x]=1; [y]=1;
-Undef
+No
 Witnesses
-Positive: 1 Negative: 1
-Flag *undef*
+Positive: 0 Negative: 1
 Condition exists ([a]=1 /\ [x]=1 /\ [y]=1)
-Observation seq Sometimes 1 1
+Observation seq Never 0 1
 Hash=0559dd8eb63cce8637b7d0e9945d646d
 

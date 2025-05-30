@@ -1,11 +1,10 @@
 Test lb Allowed
-States 2
-0:a=S8; 1:b=S8;
+States 1
 0:a=0; 1:b=0;
 No
 Witnesses
-Positive: 0 Negative: 4
+Positive: 0 Negative: 3
 Condition exists (0:a=1 /\ 1:b=1)
-Observation lb Never 0 4
+Observation lb Never 0 3
 Hash=6e4edbf1846c2f8c7db21476455d2309
 

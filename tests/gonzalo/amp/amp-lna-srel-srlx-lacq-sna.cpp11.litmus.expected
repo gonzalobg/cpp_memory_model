@@ -1,12 +1,11 @@
 Test amp-lna-srel-srlx-lacq-sna-cpp11 Forbidden
-States 2
+States 1
 0:b=0;
-0:b=1;
 Undef
 Witnesses
-Positive: 3 Negative: 1
+Positive: 3 Negative: 0
 Flag *undef*
 Condition ~exists (0:b=1)
-Observation amp-lna-srel-srlx-lacq-sna-cpp11 Sometimes 1 3
+Observation amp-lna-srel-srlx-lacq-sna-cpp11 Never 0 3
 Hash=78c514ef749aac258a20c6b6de292c3b
 

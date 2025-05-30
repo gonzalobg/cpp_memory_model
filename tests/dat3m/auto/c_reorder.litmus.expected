@@ -1,12 +1,10 @@
 Test c_reorder Allowed
-States 2
+States 1
 [p]=0; [q]=0;
-[p]=1; [q]=1;
-Undef
+No
 Witnesses
-Positive: 1 Negative: 1
-Flag *undef*
+Positive: 0 Negative: 1
 Condition exists ([p]=1 /\ [q]=1)
-Observation c_reorder Sometimes 1 1
+Observation c_reorder Never 0 1
 Hash=c6e61b3cc4e99d188768c792a17890f8
 

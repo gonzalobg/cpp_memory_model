@@ -1,13 +1,11 @@
 Test oota-causality-7 Allowed
-States 4
+States 2
 0:r1=0; 0:r2=0; 1:r3=0;
 0:r1=0; 0:r2=1; 1:r3=0;
-0:r1=0; 0:r2=1; 1:r3=1;
-0:r1=1; 0:r2=1; 1:r3=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 7
+Positive: 0 Negative: 5
 Condition exists (0:r1=1 /\ 0:r2=1 /\ 1:r3=1)
-Observation oota-causality-7 Sometimes 1 7
+Observation oota-causality-7 Never 0 5
 Hash=740f05f1945c1e87a858adc3746b688d
 

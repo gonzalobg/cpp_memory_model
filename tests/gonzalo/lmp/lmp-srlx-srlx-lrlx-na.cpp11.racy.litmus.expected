@@ -3,10 +3,9 @@ States 3
 1:a=0; 1:b=0;
 1:a=1; 1:b=0;
 1:a=2; 1:b=2;
-Undef
+Ok
 Witnesses
 Positive: 3 Negative: 0
-Flag *undef*
 Condition ~exists (1:a=2 /\ not (1:b=2))
 Observation lmp-srlx-srlx-lrx-na Never 0 3
 Hash=b0128071add54a2cfb1a12a444be40a9

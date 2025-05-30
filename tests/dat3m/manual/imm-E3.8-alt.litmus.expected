@@ -1,5 +1,5 @@
 Test imm-E3.8 Allowed
-States 16
+States 15
 0:r0=0; 0:r1=0; 3:r0=0; 3:r1=0;
 0:r0=0; 0:r1=0; 3:r0=0; 3:r1=1;
 0:r0=0; 0:r1=0; 3:r0=1; 3:r1=0;
@@ -10,16 +10,15 @@ States 16
 0:r0=0; 0:r1=1; 3:r0=1; 3:r1=1;
 0:r0=1; 0:r1=0; 3:r0=0; 3:r1=0;
 0:r0=1; 0:r1=0; 3:r0=0; 3:r1=1;
-0:r0=1; 0:r1=0; 3:r0=1; 3:r1=0;
 0:r0=1; 0:r1=0; 3:r0=1; 3:r1=1;
 0:r0=1; 0:r1=1; 3:r0=0; 3:r1=0;
 0:r0=1; 0:r1=1; 3:r0=0; 3:r1=1;
 0:r0=1; 0:r1=1; 3:r0=1; 3:r1=0;
 0:r0=1; 0:r1=1; 3:r0=1; 3:r1=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 15
+Positive: 0 Negative: 15
 Condition exists (0:r0=1 /\ 0:r1=0 /\ 3:r0=1 /\ 3:r1=0)
-Observation imm-E3.8 Sometimes 1 15
+Observation imm-E3.8 Never 0 15
 Hash=e45f4ff3f976b46709142875a8084e44
 

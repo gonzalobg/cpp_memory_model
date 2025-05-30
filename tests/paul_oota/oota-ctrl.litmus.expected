@@ -1,11 +1,10 @@
 Test oota-ctrl Allowed
-States 2
+States 1
 0:r0=0; 1:r1=0; [x]=0; [y]=0;
-0:r0=42; 1:r1=42; [x]=42; [y]=42;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 3
+Positive: 0 Negative: 3
 Condition exists (0:r0=42 /\ 1:r1=42)
-Observation oota-ctrl Sometimes 1 3
+Observation oota-ctrl Never 0 3
 Hash=52fd9dd2c577bed91a2f7b071fd0d511
 

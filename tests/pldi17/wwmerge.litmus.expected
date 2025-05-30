@@ -1,27 +1,24 @@
 Test wwmerge Allowed
-States 18
+States 15
 0:a=0; 0:b=0; 2:c=0;
 0:a=0; 0:b=0; 2:c=1;
 0:a=0; 0:b=0; 2:c=2;
 0:a=0; 0:b=1; 2:c=0;
 0:a=0; 0:b=1; 2:c=1;
 0:a=0; 0:b=1; 2:c=2;
-0:a=1; 0:b=0; 2:c=0;
 0:a=1; 0:b=0; 2:c=1;
 0:a=1; 0:b=0; 2:c=2;
 0:a=1; 0:b=1; 2:c=0;
 0:a=1; 0:b=1; 2:c=1;
 0:a=1; 0:b=1; 2:c=2;
-0:a=2; 0:b=0; 2:c=0;
-0:a=2; 0:b=0; 2:c=1;
 0:a=2; 0:b=0; 2:c=2;
 0:a=2; 0:b=1; 2:c=0;
 0:a=2; 0:b=1; 2:c=1;
 0:a=2; 0:b=1; 2:c=2;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 17
+Positive: 0 Negative: 15
 Condition exists (0:a=2 /\ 0:b=0 /\ 2:c=0)
-Observation wwmerge Sometimes 1 17
+Observation wwmerge Never 0 15
 Hash=046503ad81d4790aa63534888b9ce164
 

@@ -1,14 +1,13 @@
 Test oota-dg-1 Allowed
-States 5
+States 4
 1:r1=0; 1:r2=0; 2:r3=0; [x]=42; [y]=0; [z]=42;
 1:r1=0; 1:r2=0; 2:r3=42; [x]=42; [y]=1; [z]=42;
 1:r1=42; 1:r2=0; 2:r3=0; [x]=42; [y]=0; [z]=42;
 1:r1=42; 1:r2=0; 2:r3=42; [x]=42; [y]=1; [z]=42;
-1:r1=42; 1:r2=1; 2:r3=42; [x]=42; [y]=1; [z]=42;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 4
+Positive: 0 Negative: 4
 Condition exists (1:r2=1 /\ [y]=1)
-Observation oota-dg-1 Sometimes 1 4
+Observation oota-dg-1 Never 0 4
 Hash=91e2fce7a1e61a6bb1544c2f310fde8f
 

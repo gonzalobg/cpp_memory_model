@@ -1,12 +1,10 @@
 Test c_pq_reorder Allowed
-States 2
+States 1
 [p]=0; [q]=0;
-[p]=2; [q]=1;
-Undef
+No
 Witnesses
-Positive: 0 Negative: 2
-Flag *undef*
+Positive: 0 Negative: 1
 Condition exists ([p]=1 /\ [q]=1)
-Observation c_pq_reorder Never 0 2
+Observation c_pq_reorder Never 0 1
 Hash=63b97be159ec65f84ff3c70d2e4e40e2
 

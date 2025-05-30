@@ -1,12 +1,10 @@
 Test arfna_transformed Allowed
-States 2
+States 1
 [x]=0; [y]=0;
-[x]=1; [y]=1;
-Undef
+No
 Witnesses
-Positive: 1 Negative: 1
-Flag *undef*
+Positive: 0 Negative: 1
 Condition exists ([x]=1 /\ [y]=1)
-Observation arfna_transformed Sometimes 1 1
+Observation arfna_transformed Never 0 1
 Hash=fbb437dbcdc8a88611a71fe92622c1d5
 

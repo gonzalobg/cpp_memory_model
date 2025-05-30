@@ -1,17 +1,16 @@
 Test mp-rs-add-est Allowed
-States 8
+States 7
 1:a=0; 1:b=0; [x]=2;
 1:a=0; 1:b=0; [x]=3;
 1:a=1; 1:b=0; [x]=2;
 1:a=1; 1:b=0; [x]=3;
 1:a=2; 1:b=0; [x]=2;
 1:a=2; 1:b=0; [x]=3;
-1:a=3; 1:b=0; [x]=3;
 1:a=3; 1:b=1; [x]=3;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 12
+Positive: 0 Negative: 12
 Condition exists ([x]=3 /\ 1:a=3 /\ 1:b=0)
-Observation mp-rs-add-est Sometimes 1 12
+Observation mp-rs-add-est Never 0 12
 Hash=d9e5b0ee0a001a2f442e4d081a17d0df
 

@@ -1,11 +1,10 @@
 Test seq2 Allowed
-States 2
+States 1
 [a]=1; [x]=0; [y]=0;
-[a]=1; [x]=1; [y]=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 1
+Positive: 0 Negative: 1
 Condition exists ([a]=1 /\ [x]=1 /\ [y]=1)
-Observation seq2 Sometimes 1 1
+Observation seq2 Never 0 1
 Hash=e37262f71f5106920e496da6fd1dee2a
 

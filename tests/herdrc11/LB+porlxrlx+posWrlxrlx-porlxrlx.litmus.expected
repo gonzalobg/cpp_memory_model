@@ -1,15 +1,13 @@
 Test LB+porlxrlx+posWrlxrlx-porlxrlx Allowed
-States 6
+States 4
 0:r0=0; 1:r0=0; [y]=1;
 0:r0=0; 1:r0=0; [y]=2;
 0:r0=0; 1:r0=1; [y]=2;
 0:r0=1; 1:r0=0; [y]=1;
-0:r0=1; 1:r0=0; [y]=2;
-0:r0=1; 1:r0=1; [y]=2;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 5
+Positive: 0 Negative: 4
 Condition exists ([y]=2 /\ 0:r0=1 /\ 1:r0=1)
-Observation LB+porlxrlx+posWrlxrlx-porlxrlx Sometimes 1 5
+Observation LB+porlxrlx+posWrlxrlx-porlxrlx Never 0 4
 Hash=954cb7c63bfe70e606c50d5305ac6df5
 

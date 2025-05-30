@@ -1,12 +1,10 @@
 Test c Allowed
-States 2
+States 1
 [p]=0; [q]=0;
-[p]=1; [q]=1;
-Undef
+No
 Witnesses
-Positive: 1 Negative: 1
-Flag *undef*
+Positive: 0 Negative: 1
 Condition exists ([p]=1 /\ [q]=1)
-Observation c Sometimes 1 1
+Observation c Never 0 1
 Hash=0ff4377802cdc23062bd3f44362c7fac
 

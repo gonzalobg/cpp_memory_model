@@ -1,14 +1,13 @@
 Test oota-causality-15 Allowed
-States 5
+States 4
 0:r0=0; 0:r1=0; 1:r2=0; 1:r3=0; 1:r4=0;
 0:r0=0; 0:r1=0; 1:r2=1; 1:r3=0; 1:r4=1;
 0:r0=1; 0:r1=0; 1:r2=0; 1:r3=0; 1:r4=0;
 0:r0=1; 0:r1=0; 1:r2=1; 1:r3=0; 1:r4=1;
-0:r0=1; 0:r1=1; 1:r2=0; 1:r3=1; 1:r4=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 4
+Positive: 0 Negative: 4
 Condition exists (0:r0=1 /\ 0:r1=1 /\ 1:r2=0 /\ 1:r3=1 /\ not (1:r4=0))
-Observation oota-causality-15 Sometimes 1 4
+Observation oota-causality-15 Never 0 4
 Hash=b69e202206e02ebc10da9ebce1ef54d3
 

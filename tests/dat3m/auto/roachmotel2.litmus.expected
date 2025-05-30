@@ -1,12 +1,10 @@
 Test roachmotel2 Allowed
-States 2
+States 1
 [a]=1; [x]=0; [y]=0; [z]=1;
-[a]=1; [x]=1; [y]=1; [z]=1;
-Undef
+No
 Witnesses
-Positive: 2 Negative: 1
-Flag *undef*
+Positive: 0 Negative: 1
 Condition exists ([a]=1 /\ [z]=1 /\ [x]=1 /\ [y]=1)
-Observation roachmotel2 Sometimes 2 1
+Observation roachmotel2 Never 0 1
 Hash=6d27da9e3c6dcde00c4db99dd97e6e43
 
