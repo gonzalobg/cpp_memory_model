@@ -1,0 +1,13 @@
+Test wrc-srlx-lacq-srel-lacq-lna Forbidden
+States 3
+1:a=0; 2:b=0; 2:c=0;
+1:a=1; 2:b=0; 2:c=0;
+1:a=1; 2:b=1; 2:c=1;
+Undef
+Witnesses
+Positive: 3 Negative: 0
+Flag *undef*
+Condition ~exists (1:a=1 /\ 2:b=1 /\ 2:c=0)
+Observation wrc-srlx-lacq-srel-lacq-lna Never 0 3
+Hash=0ab822c860aabb7902756941d39304cf
+

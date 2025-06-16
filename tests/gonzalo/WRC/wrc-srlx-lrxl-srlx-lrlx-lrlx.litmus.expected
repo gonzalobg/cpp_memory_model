@@ -1,0 +1,13 @@
+Test wrc-srlx-lrxl-srlx-lrlx-lrlx Allowed
+States 4
+1:a=0; 2:b=0; 2:c=0;
+1:a=1; 2:b=0; 2:c=0;
+1:a=1; 2:b=1; 2:c=0;
+1:a=1; 2:b=1; 2:c=1;
+Ok
+Witnesses
+Positive: 1 Negative: 3
+Condition exists (1:a=1 /\ 2:b=1 /\ 2:c=0)
+Observation wrc-srlx-lrxl-srlx-lrlx-lrlx Sometimes 1 3
+Hash=b0328211060219b3882bc3fd412cdff6
+
