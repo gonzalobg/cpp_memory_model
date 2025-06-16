@@ -1,13 +1,13 @@
-Test wwc-srlx-lrxl-srlx-lrlx-srlx Forbidden
+Test wwc-srlx-lrxl-srlx-lrlx-srlx Allowed
 States 4
 1:a=0; 2:b=0; [x]=1;
 1:a=1; 2:b=0; [x]=1;
 1:a=1; 2:b=1; [x]=1;
 1:a=1; 2:b=1; [x]=2;
-No
+Ok
 Witnesses
-Positive: 3 Negative: 1
-Condition ~exists (1:a=1 /\ 2:b=1 /\ not ([x]=2))
+Positive: 1 Negative: 3
+Condition exists (1:a=1 /\ 2:b=1 /\ not ([x]=2))
 Observation wwc-srlx-lrxl-srlx-lrlx-srlx Sometimes 1 3
 Hash=0292f33171bef836b70a559462fda593
 
