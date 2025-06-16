@@ -1,0 +1,12 @@
+Test wrc-srlx-lrxl-fsc-srlx-lrlx-fsc-lrlx Forbidden
+States 3
+1:a=0; 2:b=0; 2:c=0;
+1:a=1; 2:b=0; 2:c=0;
+1:a=1; 2:b=1; 2:c=1;
+Ok
+Witnesses
+Positive: 3 Negative: 0
+Condition ~exists (1:a=1 /\ 2:b=1 /\ 2:c=0)
+Observation wrc-srlx-lrxl-fsc-srlx-lrlx-fsc-lrlx Never 0 3
+Hash=55be5289af717c1ed8ff1f978a6fa380
+
