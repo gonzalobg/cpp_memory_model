@@ -14,5 +14,7 @@ docker run \
   -v $(pwd):/src \
   -w /src \
   $IMG \
-  bash -c 'set -ex && CLASSPATH=/home/Dat3M/dartagnan/target/libs:$CLASSPATH java -jar /home/Dat3M/dartagnan/target/dartagnan.jar /src/model/rc11.cat /src/tests/'
- 
+  bash -c 'set -ex && CLASSPATH=/home/Dat3M/dartagnan/target/libs:$CLASSPATH java -jar /home/Dat3M/dartagnan/target/dartagnan.jar /src/model/cpp17.cat /src/tests/'
+
+# To check for termination, add --property=termination
+
