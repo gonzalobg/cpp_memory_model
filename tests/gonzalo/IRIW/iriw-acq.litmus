@@ -1,4 +1,4 @@
-C iriw.litmus
+C iriw-acq.litmus
 { [x] = 0; [y] = 0;  }
 
 P0 (int* x) {
