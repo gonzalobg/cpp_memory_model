@@ -1,0 +1,14 @@
+C lb-fwd
+{ [x] = 0; [y] = 0;  }
+
+P0 (int* x, int* y) {
+  while(atomic_load_explicit(x, memory_order_relaxed) == 0) {}
+  atomic_store_explicit(y, 1, memory_order_relaxed);
+}
+
+P1 (int* x, int* y) {
+  while(atomic_load_explicit(y, memory_order_relaxed) == 0) {}
+  atomic_store_explicit(x, 1, memory_order_relaxed);
+}
+
+exists([x]=1)
