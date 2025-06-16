@@ -1,0 +1,12 @@
+Test wwc-ssc-lsc-ssc-lsc-sna Forbidden
+States 3
+1:a=0; 2:b=0; [x]=1;
+1:a=1; 2:b=0; [x]=1;
+1:a=1; 2:b=1; [x]=2;
+Ok
+Witnesses
+Positive: 3 Negative: 0
+Condition ~exists (1:a=1 /\ 2:b=1 /\ not ([x]=2))
+Observation wwc-ssc-lsc-ssc-lsc-sna Never 0 3
+Hash=dbe6d4aa702061fa0c9f3fd88f4f890d
+

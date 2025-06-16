@@ -1,0 +1,12 @@
+Test wwc-srlx-lrxl-far-srlx-lrlx-facq-srlx Forbidden
+States 3
+1:a=0; 2:b=0; [x]=1;
+1:a=1; 2:b=0; [x]=1;
+1:a=1; 2:b=1; [x]=2;
+Ok
+Witnesses
+Positive: 3 Negative: 0
+Condition ~exists (1:a=1 /\ 2:b=1 /\ not ([x]=2))
+Observation wwc-srlx-lrxl-far-srlx-lrlx-facq-srlx Never 0 3
+Hash=c8edc0c75ddaeb02b3ab1d45f667d79a
+

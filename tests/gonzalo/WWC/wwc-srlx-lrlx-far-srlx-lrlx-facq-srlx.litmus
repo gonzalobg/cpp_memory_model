@@ -1,0 +1,24 @@
+C wwc-srlx-lrxl-far-srlx-lrlx-facq-srlx.litmus
+{ [x] = 0; [y] = 0;  }
+
+P0 (int* x) {
+  atomic_store_explicit(x, 1, memory_order_relaxed);
+}
+
+P1 (int* x, int* y) {
+  int a = atomic_load_explicit(x, memory_order_relaxed);
+  if (a == 1) {
+    atomic_thread_fence(memory_order_acq_rel);  
+    atomic_store_explicit(y, 1, memory_order_relaxed);
+  }
+}
+
+P2 (int* x, int* y) {
+  int b = atomic_load_explicit(y, memory_order_relaxed);
+  if (b == 1) {
+     atomic_thread_fence(memory_order_acquire);  
+     atomic_store_explicit(x, 2, memory_order_relaxed);
+  }
+}
+
+~exists(1:a=1 /\ 2:b=1 /\ ~[x]=2)
