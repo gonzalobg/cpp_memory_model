@@ -1,0 +1,9 @@
+C coWW-sna-sna.litmus
+{ [x] = 0; }
+
+P0 (int* x) {
+  *x = 1;
+  *x = 2;
+}
+
+~exists ([x]=0 \/ [x]=1)
