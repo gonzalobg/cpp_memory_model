@@ -1,0 +1,22 @@
+C isa2-fadd-na.litmus
+{ [x] = 0; }
+
+P0 (int* x) {
+  atomic_store_explicit(x, 1, memory_order_relaxed);
+}
+
+P1 (int* x) {
+  int r0 = atomic_load_explicit(x, memory_order_relaxed);
+  if (r0 == 1) {
+    atomic_store_explicit(x, 2, memory_order_relaxed);
+  }
+}
+
+P2 (int* x) {
+  int r1 = atomic_load_explicit(x, memory_order_relaxed);
+  if (r1 == 2) {
+     int a = *x;
+  }
+}
+
+~exists(2:r1=2 /\ ~2:a=2)

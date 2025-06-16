@@ -1,0 +1,23 @@
+C isa2.litmus
+{ [d] = 0; [f0] = 0; [f1] = 0; }
+
+P0 (int* d, int* f0, int* f1) {
+  *d = 42;
+  atomic_store_explicit(f0, 1, memory_order_release);
+}
+
+P1 (int* d, int* f0, int* f1) {
+  int r0 = atomic_load_explicit(f0, memory_order_acquire);
+  if (r0 == 1) {
+    atomic_store_explicit(f1, 1, memory_order_release);
+  }
+}
+
+P2 (int* d, int* f0, int* f1) {
+  int r1 = atomic_load_explicit(f1, memory_order_acquire);
+  if (r1 == 1) {
+     int a = *d;
+  }
+}
+
+~exists(2:r1=1 /\ ~2:a=42)

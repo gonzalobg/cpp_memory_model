@@ -1,0 +1,11 @@
+Test isa2 Forbidden
+States 2
+2:a=0; 2:r1=0;
+2:a=42; 2:r1=1;
+Ok
+Witnesses
+Positive: 3 Negative: 0
+Condition ~exists (2:r1=1 /\ not (2:a=42))
+Observation isa2 Never 0 3
+Hash=cb97b221b801a4a8263b58b938bd7bb9
+

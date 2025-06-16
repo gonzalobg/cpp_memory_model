@@ -1,0 +1,13 @@
+Test isa2-fadd-na Forbidden
+States 3
+2:a=0; 2:r1=0;
+2:a=0; 2:r1=1;
+2:a=2; 2:r1=2;
+Undef
+Witnesses
+Positive: 5 Negative: 0
+Flag *undef*
+Condition ~exists (2:r1=2 /\ not (2:a=2))
+Observation isa2-fadd-na Never 0 5
+Hash=ac7de686397daa9a31190874c855ef30
+
