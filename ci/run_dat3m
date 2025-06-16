@@ -14,5 +14,5 @@ docker run \
   -v $(pwd):/src \
   -w /src \
   $IMG \
-  bash -c 'set -ex && CLASSPATH=/home/Dat3M/dartagnan/target/libs:$CLASSPATH java -jar /home/Dat3M/dartagnan/target/dartagnan.jar /src/model/rc11.cat /src/tests/gonzalo/mp/mp-sna-frel-srlx-lrlx-facq-lna.litmus'
+  bash -c 'set -ex && CLASSPATH=/home/Dat3M/dartagnan/target/libs:$CLASSPATH java -jar /home/Dat3M/dartagnan/target/dartagnan.jar /src/model/rc11.cat /src/tests/'
  

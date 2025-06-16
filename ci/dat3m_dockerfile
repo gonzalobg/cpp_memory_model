@@ -13,9 +13,6 @@ RUN cd home && \
     cd Dat3M && \
     mvn clean install -DskipTests
 
-# symlink for clang
-RUN ln -s clang-12 /usr/bin/clang
-
 ENV DAT3M_HOME=/home/Dat3M
 ENV DAT3M_OUTPUT=/src/target_dat3m
 ENV CFLAGS="-I$DAT3M_HOME/include"
