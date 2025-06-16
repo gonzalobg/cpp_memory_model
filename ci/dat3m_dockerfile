@@ -1,11 +1,11 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Update Ubuntu Software repository
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y software-properties-common git graphviz sudo wget maven openjdk-17-jdk openjdk-17-jre graphviz z3
+    apt-get install -y build-essential software-properties-common git graphviz sudo wget maven openjdk-17-jdk openjdk-17-jre graphviz z3 clang
 
 # Install Dat3M
 RUN cd home && \
@@ -20,3 +20,4 @@ ENV DAT3M_HOME=/home/Dat3M
 ENV DAT3M_OUTPUT=/src/target_dat3m
 ENV CFLAGS="-I$DAT3M_HOME/include"
 ENV OPTFLAGS="-mem2reg -sroa -early-cse -indvars -loop-unroll -fix-irreducible -loop-simplify -simplifycfg -gvn"
+ENV CLASSPATH=$CLASSPATH:/home/Dat3M/dartagnan/target/libs
