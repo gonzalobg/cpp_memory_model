@@ -1,0 +1,9 @@
+C roach-motel
+{ [x] = 0; [y] = 0;  }
+
+P0 (int* x, int* y) {
+  atomic_store_explicit(x, 1, memory_order_relaxed);
+  while(atomic_load_explicit(y, memory_order_relaxed) == 0) {}
+}
+
+~exists(terminates)
