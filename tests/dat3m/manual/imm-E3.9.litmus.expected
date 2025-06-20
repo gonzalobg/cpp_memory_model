@@ -1,15 +1,14 @@
 Test imm-E3.9 Allowed
-States 6
+States 5
 0:r0=0; 0:r1=0; 2:r0=0;
 0:r0=0; 0:r1=0; 2:r0=1;
 0:r0=0; 0:r1=1; 2:r0=0;
 0:r0=0; 0:r1=1; 2:r0=1;
-0:r0=1; 0:r1=0; 2:r0=1;
 0:r0=1; 0:r1=1; 2:r0=1;
 No
 Witnesses
-Positive: 0 Negative: 6
+Positive: 0 Negative: 5
 Condition exists (0:r0=1 /\ 0:r1=0 /\ 2:r0=10)
-Observation imm-E3.9 Never 0 6
+Observation imm-E3.9 Never 0 5
 Hash=cd46d948530c7e5b60a4863eea633a6e
 

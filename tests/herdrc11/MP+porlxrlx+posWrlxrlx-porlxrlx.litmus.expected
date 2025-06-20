@@ -1,15 +1,13 @@
 Test MP+porlxrlx+posWrlxrlx-porlxrlx Allowed
-States 6
+States 4
 1:r0=0; 1:r1=0; [y]=1;
-1:r0=0; 1:r1=0; [y]=2;
 1:r0=0; 1:r1=1; [y]=1;
 1:r0=0; 1:r1=1; [y]=2;
-1:r0=1; 1:r1=0; [y]=2;
 1:r0=1; 1:r1=1; [y]=2;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 5
+Positive: 0 Negative: 4
 Condition exists ([y]=2 /\ 1:r0=1 /\ 1:r1=0)
-Observation MP+porlxrlx+posWrlxrlx-porlxrlx Sometimes 1 5
+Observation MP+porlxrlx+posWrlxrlx-porlxrlx Never 0 4
 Hash=6a3417f2a5afc5eafded86840739d1a3
 

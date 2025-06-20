@@ -1,17 +1,16 @@
 Test RWC-sc-acq-sc-sc-sc Allowed
-States 8
+States 7
 1:r1=0; 1:r2=0; 2:r3=0;
 1:r1=0; 1:r2=0; 2:r3=1;
 1:r1=0; 1:r2=1; 2:r3=0;
 1:r1=0; 1:r2=1; 2:r3=1;
-1:r1=1; 1:r2=0; 2:r3=0;
 1:r1=1; 1:r2=0; 2:r3=1;
 1:r1=1; 1:r2=1; 2:r3=0;
 1:r1=1; 1:r2=1; 2:r3=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 7
+Positive: 0 Negative: 7
 Condition exists (1:r1=1 /\ 1:r2=0 /\ 2:r3=0)
-Observation RWC-sc-acq-sc-sc-sc Sometimes 1 7
+Observation RWC-sc-acq-sc-sc-sc Never 0 7
 Hash=c0b295c0c45ee2e0c26a42986307cc8a
 

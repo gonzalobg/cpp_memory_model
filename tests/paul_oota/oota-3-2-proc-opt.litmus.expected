@@ -1,11 +1,10 @@
 Test oota-3-2-proc-opt Allowed
-States 2
-0:r1=S10; 1:r2=S10; 1:r3=0; [x]=S10; [y]=S10; [z]=S10;
+States 1
 0:r1=0; 1:r2=0; 1:r3=0; [x]=0; [y]=0; [z]=0;
 No
 Witnesses
-Positive: 0 Negative: 4
+Positive: 0 Negative: 3
 Condition exists (0:r1=17 /\ 1:r2=17 /\ 1:r3=17)
-Observation oota-3-2-proc-opt Never 0 4
+Observation oota-3-2-proc-opt Never 0 3
 Hash=f95c908abe0279a163f888cdfe675da9
 

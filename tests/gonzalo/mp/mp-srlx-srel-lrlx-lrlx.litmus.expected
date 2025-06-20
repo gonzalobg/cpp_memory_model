@@ -1,12 +1,11 @@
 Test mp-srlx-srel-lrlx-lrlx Allowed
-States 3
+States 2
 1:a=0; 1:b=0;
-1:a=1; 1:b=0;
 1:a=1; 1:b=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 2
+Positive: 0 Negative: 2
 Condition exists (1:a=1 /\ 1:b=0)
-Observation mp-srlx-srel-lrlx-lrlx Sometimes 1 2
+Observation mp-srlx-srel-lrlx-lrlx Never 0 2
 Hash=57dd88436ff37a55207a60cd86beb3cc
 

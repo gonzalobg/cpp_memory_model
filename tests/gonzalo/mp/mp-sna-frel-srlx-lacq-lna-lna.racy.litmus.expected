@@ -2,10 +2,9 @@ Test mp-sna-frel-srlx-lacq-lna-lna-racy Allowed
 States 2
 1:a=0; 1:b=0; 1:c=0;
 1:a=1; 1:b=1; 1:c=1;
-Undef
+No
 Witnesses
 Positive: 0 Negative: 2
-Flag *undef*
 Condition exists (1:a=1 /\ 1:b=0 /\ not (1:c=1))
 Observation mp-sna-frel-srlx-lacq-lna-lna-racy Never 0 2
 Hash=7dcec2340fda9d72eca193bc94e25290

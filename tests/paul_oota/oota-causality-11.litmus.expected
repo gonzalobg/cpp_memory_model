@@ -1,14 +1,11 @@
 Test oota-causality-11 Allowed
-States 5
+States 2
 0:r1=0; 0:r2=0; 1:r3=0; 1:r4=0; [w]=0; [x]=1; [y]=0; [z]=0;
 0:r1=0; 0:r2=1; 1:r3=0; 1:r4=0; [w]=0; [x]=1; [y]=1; [z]=0;
-0:r1=0; 0:r2=1; 1:r3=1; 1:r4=0; [w]=0; [x]=1; [y]=1; [z]=1;
-0:r1=1; 0:r2=1; 1:r3=1; 1:r4=0; [w]=1; [x]=1; [y]=1; [z]=1;
-0:r1=1; 0:r2=1; 1:r3=1; 1:r4=1; [w]=1; [x]=1; [y]=1; [z]=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 15
+Positive: 0 Negative: 8
 Condition exists (0:r1=1 /\ 0:r2=1 /\ 1:r3=1 /\ 1:r4=1)
-Observation oota-causality-11 Sometimes 1 15
+Observation oota-causality-11 Never 0 8
 Hash=74157e54f115173bab1a3c70e23ff896
 

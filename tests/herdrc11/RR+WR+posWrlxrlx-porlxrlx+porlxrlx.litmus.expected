@@ -1,13 +1,12 @@
 Test RR+WR+posWrlxrlx-porlxrlx+porlxrlx Allowed
-States 4
-0:r0=0; 0:r1=0; 1:r0=0;
+States 3
 0:r0=0; 0:r1=0; 1:r0=1;
 0:r0=0; 0:r1=1; 1:r0=0;
 0:r0=0; 0:r1=1; 1:r0=1;
-Ok
+No
 Witnesses
-Positive: 1 Negative: 3
+Positive: 0 Negative: 3
 Condition exists (0:r0=0 /\ 0:r1=0 /\ 1:r0=0)
-Observation RR+WR+posWrlxrlx-porlxrlx+porlxrlx Sometimes 1 3
+Observation RR+WR+posWrlxrlx-porlxrlx+porlxrlx Never 0 3
 Hash=736a73a8cb0be038527c1908e0155387
 
