@@ -1,2 +1,11 @@
-Warning: File "tests/popl15/auto/a2_reorder+rel-acq+Crlx.litmus": Non symbolic location with no initial write: '[0]'
+Test a2_reorder+rel-acq+Crlx Required
+States 1
+
+Undef
+Witnesses
+Positive: 3 Negative: 0
+Flag *undef*
+Condition forall (true)
+Observation a2_reorder+rel-acq+Crlx Always 3 0
+Hash=d4871a95e17b253cc7af76274cf68faa
 

@@ -1,2 +1,11 @@
-Warning: File "tests/popl15/auto/a2_reorder+sc+Wsc.litmus": Non symbolic location with no initial write: '[0]'
+Test a2_reorder+sc+Wsc Required
+States 1
+
+Undef
+Witnesses
+Positive: 3 Negative: 0
+Flag *undef*
+Condition forall (true)
+Observation a2_reorder+sc+Wsc Always 3 0
+Hash=33517dcaaca21a8e871b6874b6c6f7ef
 

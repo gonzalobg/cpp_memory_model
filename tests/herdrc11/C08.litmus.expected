@@ -1,1 +1,1 @@
-Warning: File "tests/herdrc11/C08.litmus": make 32 value with s128 mask
+Warning: File "tests/herdrc11/C08.litmus": mask 32 bit value 0x0 value with s128 mask
