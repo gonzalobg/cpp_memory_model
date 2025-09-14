@@ -1,2 +1,11 @@
-Warning: File "tests/popl15/auto/a2_reorder+sc+Rna.litmus": Non symbolic location with no initial write: '[0]'
+Test a2_reorder+sc+Rna Required
+States 1
+
+Undef
+Witnesses
+Positive: 3 Negative: 0
+Flag *undef*
+Condition forall (true)
+Observation a2_reorder+sc+Rna Always 3 0
+Hash=fcec0998dd820408fb88d2677573ea90
 
