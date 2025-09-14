@@ -1,7 +1,7 @@
 C a2_reorder+sc+Wna
 { [x] = 0; [y] = 0; [zero] = 0; }
 
-P0 (int* x, int* y) {
+P0 (int* x, int* y, int* zero) {
   atomic_compare_exchange_strong_explicit(x, zero, 1, memory_order_seq_cst, memory_order_relaxed);
   *y = 0;
 }

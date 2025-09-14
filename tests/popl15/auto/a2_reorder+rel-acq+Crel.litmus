@@ -1,7 +1,7 @@
 C a2_reorder+rel-acq+Crel
 { [x] = 0; [y] = 0; [zero] = 0; }
 
-P0 (int* x, int* y) {
+P0 (int* x, int* y, int* zero) {
   atomic_compare_exchange_strong_explicit(x, zero, 1, memory_order_acq_rel, memory_order_relaxed);
   atomic_compare_exchange_strong_explicit(y, zero, 1, memory_order_release, memory_order_relaxed);
 }
