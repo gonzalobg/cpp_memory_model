@@ -1,1 +1,10 @@
-Warning: File "tests/popl15/auto/a3v2+acq+Racq.litmus", line 16, characters 8-9: unexpected '=' (in final) (User error)
+Test a3v2+acq+Racq Required
+States 1
+
+Ok
+Witnesses
+Positive: 2 Negative: 0
+Condition forall (true)
+Observation a3v2+acq+Racq Always 2 0
+Hash=fe12e066f65ecff88fce299a0844afb5
+
