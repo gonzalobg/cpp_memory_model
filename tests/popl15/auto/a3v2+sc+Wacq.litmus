@@ -9,7 +9,7 @@ P0 (int* x, int* y) {
 P1 (int* x, int* y, int* one) {
   int r0 = atomic_compare_exchange_strong_explicit(x, one, 2, memory_order_seq_cst, memory_order_relaxed);
   if (r0) { // cas must have returned true to exit elided while loop
-    atomic_store_explicit(y, 1, memory_order_acquire);
+    atomic_store_explicit(y, 1, memory_order_relaxed);
   }
 }
 

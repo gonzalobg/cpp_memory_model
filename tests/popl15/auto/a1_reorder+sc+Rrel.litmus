@@ -3,7 +3,7 @@ C a1_reorder+sc+Rrel
 
 P0 (int* x, int* y, int* zero) {
   atomic_store_explicit(x, 1, memory_order_seq_cst);
-  int t8 = atomic_load_explicit(y, memory_order_release);
+  int t8 = atomic_load_explicit(y, memory_order_relaxed);
 }
 
 P1 (int* x, int* y) {

@@ -10,6 +10,6 @@ P1 (int* x, int* y, int* zero) {
   atomic_thread_fence(memory_order_acquire);
   int r0 = atomic_load_explicit(x, memory_order_relaxed);
   if (r0) {
-    int t3 = atomic_load_explicit(y, memory_order_release);
+    int t3 = atomic_load_explicit(y, memory_order_relaxed);
   }
 }
