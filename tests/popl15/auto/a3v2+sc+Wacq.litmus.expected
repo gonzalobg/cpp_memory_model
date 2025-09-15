@@ -1,1 +1,10 @@
-Warning: File "tests/popl15/auto/a3v2+sc+Wacq.litmus", line 16, characters 8-9: unexpected '=' (in final) (User error)
+Test a3v2+sc+Wacq Required
+States 1
+
+Ok
+Witnesses
+Positive: 2 Negative: 0
+Condition forall (true)
+Observation a3v2+sc+Wacq Always 2 0
+Hash=ce7a3cf3181ddb1a523ddef0b9abc275
+

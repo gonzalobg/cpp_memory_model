@@ -13,4 +13,4 @@ P1 (int* x, int* y, int* one) {
   }
 }
 
-exists(1=1)
+
