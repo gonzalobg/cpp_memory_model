@@ -7,5 +7,5 @@ Positive: 3 Negative: 0
 Flag *undef*
 Condition forall (true)
 Observation a6_reorder+sc+Wacq Always 3 0
-Hash=4060eaaf78157c3f94b2c9f1a73f9bb2
+Hash=5c35e4ce54235014fad9f4ab8f1b999e
 
