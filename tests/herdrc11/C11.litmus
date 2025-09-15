@@ -2,6 +2,7 @@ C C11
 
 (* Test to ensure _Atomic __int128 x = 0; is parsed**)
 
+Variant=S128
 {__int128 y; __int128 x; _Atomic __int128 z = 0;}
 
 P0 (volatile __int128* y,volatile __int128* x) {

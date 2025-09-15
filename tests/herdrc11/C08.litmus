@@ -2,6 +2,7 @@ C C08
 
 (* Test to ensure diy generated tests are accepted by herd - int128*)
 
+Variant=S128
 {__int128 y; __int128 x;}
 
 P0 (volatile __int128* y,volatile __int128* x) {
