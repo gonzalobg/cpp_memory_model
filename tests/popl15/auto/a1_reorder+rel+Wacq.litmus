@@ -3,7 +3,7 @@ C a1_reorder+rel+Wacq
 
 P0 (int* x, int* y, int* zero) {
   atomic_store_explicit(x, 1, memory_order_release);
-  atomic_store_explicit(y, 0, memory_order_acquire);
+  atomic_store_explicit(y, 0, memory_order_relaxed);
 }
 
 P1 (int* x, int* y) {

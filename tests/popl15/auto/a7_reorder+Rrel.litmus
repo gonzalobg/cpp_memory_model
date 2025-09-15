@@ -3,7 +3,7 @@ C a7_reorder+Rrel
 
 P0 (int* x, int* y, int *zero) {
   atomic_thread_fence(memory_order_release);
-  int t3 = atomic_load_explicit(y, memory_order_release);
+  int t3 = atomic_load_explicit(y, memory_order_relaxed);
   atomic_store_explicit(x, 1, memory_order_relaxed);
 }
 

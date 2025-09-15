@@ -3,7 +3,7 @@ C a2_reorder+sc+Rrel
 
 P0 (int* x, int* y) {
   atomic_compare_exchange_strong_explicit(x, zero, 1, memory_order_seq_cst, memory_order_relaxed);
-  int t13 = atomic_load_explicit(y, memory_order_release);
+  int t13 = atomic_load_explicit(y, memory_order_relaxed);
 }
 
 P1 (int* x, int* y) {

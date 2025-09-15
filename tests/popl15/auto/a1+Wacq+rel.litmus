@@ -2,7 +2,7 @@ C a1+Wacq+rel
 { [x] = 0; [y] = 0; [zero] = 0; }
 
 P0 (int* x, int* y, int* zero) {
-  atomic_store_explicit(y, 0, memory_order_acquire);
+  atomic_store_explicit(y, 0, memory_order_relaxed);
   atomic_store_explicit(x, 1, memory_order_release);
 }
 
