@@ -106,3 +106,9 @@ We incorporate this into the [model/cpp17.cat](./model/cpp17.cat) as follows:
 - let rs = ([W]; (sb & loc)?; [W & (RLX | REL | ACQ_REL | ACQ | SC)]) \ (coe; coe); (rf; myrmw)*
 + let rs = [W & (RLX | REL | ACQ_REL | ACQ | SC)]; (rf; myrmw)*
 ```
+
+# Forward progress tests
+
+Work in progress. Written in C++ rather than `.litmus` format.
+
+To run compile and run them all do `./tests/fwd_progress/build-all.sh run`. Depends on GNU timeout and clang.
