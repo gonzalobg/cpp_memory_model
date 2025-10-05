@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -e
+
+OUT=target
+CXX=clang++
+
+if ! command -v timeout ; then
+    echo "timeout command not found"
+    exit 1
+fi
+
+mkdir -p target
+
+set -x
+for f in `find tests -name "*.cpp" -type f`; do
+  ${CXX} -Wall -std=c++23 -o ${OUT}/${f##*/}_bin ${LDFLAGS} ${f} &
+done
+
+wait
+set +ex
+
+for f in `find tests -name "*.cpp" -type f`; do
+    BIN="./${OUT}/${f##*/}_bin"
+    echo "Running ${BIN}"
+    timeout 2s ${BIN}
+    if [ $? -ne 0 ]; then
+        echo "  Timeout exceeded!";
+    fi
+done

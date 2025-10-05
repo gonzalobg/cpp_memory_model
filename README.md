@@ -109,6 +109,5 @@ We incorporate this into the [model/cpp17.cat](./model/cpp17.cat) as follows:
 
 # Forward progress tests
 
-Work in progress. Written in C++ rather than `.litmus` format.
-
-To run compile and run them all do `./tests/fwd_progress/build-all.sh run`. Depends on GNU timeout and clang.
+Work in progress. For now, written in C++ rather than `.litmus` format.
+To run compile and run them all do `./ci/run_rt`.

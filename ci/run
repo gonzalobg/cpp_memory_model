@@ -12,13 +12,13 @@ fi
 CONF=model/${MODEL}.cfg
 
 for f in `find tests -name "*.litmus" -type f`; do
-    herd7  -o $OUT -conf $CONF -timeout none $f &> $f.expected &
+    herd7  -o ${OUT} -conf ${CONF} -timeout none ${f} &> ${f}.expected &
 done
 
 wait
 
 for f in `find tests -name "*.litmus" -type f`; do
-    sed -i  '' '/^Time/d' $f.expected &
+    sed -i  '' '/^Time/d' ${f}.expected &
 done
 
 wait
