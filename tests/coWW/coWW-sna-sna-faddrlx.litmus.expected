@@ -1,0 +1,11 @@
+Test coWW-sna-sna-faddrlx Forbidden
+States 1
+[x]=2;
+Undef
+Witnesses
+Positive: 3 Negative: 0
+Flag *undef*
+Condition ~exists ([x]=0 \/ [x]=1)
+Observation coWW-sna-sna-faddrlx Never 0 3
+Hash=3ef96ddc42889e85f8a3166eb2ebbb59
+

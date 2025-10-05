@@ -1,0 +1,9 @@
+C coWW-srlx-sna-none
+{ [x] = 0; }
+
+P0 (int* x) {
+  atomic_store_explicit(x, 1, memory_order_relaxed);
+  *x = 2;
+}
+
+~exists ([x]=0 \/ [x]=1)

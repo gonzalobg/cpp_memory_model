@@ -1,0 +1,14 @@
+C coWW-sna-sna-lrlx
+{ [x] = 0; }
+
+P0 (int* x) {
+  *x = 1;
+  *x = 2;
+}
+
+
+P1 (int* x) {
+  atomic_load_explicit(x, memory_order_relaxed);
+}
+
+~exists ([x]=0 \/ [x]=1)

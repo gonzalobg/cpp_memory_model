@@ -1,0 +1,11 @@
+Test coWW-sna-sna-lna Forbidden
+States 1
+[x]=2;
+Undef
+Witnesses
+Positive: 3 Negative: 0
+Flag *undef*
+Condition ~exists ([x]=0 \/ [x]=1)
+Observation coWW-sna-sna-lna Never 0 3
+Hash=46d63a9b73a7b20520d6d5ba8c4ff614
+

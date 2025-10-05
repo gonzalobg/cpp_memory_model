@@ -1,10 +1,10 @@
-Test coWW-sna-sna Forbidden
+Test coWW-sna-sna-none Forbidden
 States 1
 [x]=2;
 Ok
 Witnesses
 Positive: 1 Negative: 0
 Condition ~exists ([x]=0 \/ [x]=1)
-Observation coWW-sna-sna Never 0 1
+Observation coWW-sna-sna-none Never 0 1
 Hash=3287492fd55d817261b00074796b0336
 

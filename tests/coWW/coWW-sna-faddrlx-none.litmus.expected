@@ -1,0 +1,10 @@
+Test coWW-sna-faddrlx-none Forbidden
+States 1
+[x]=2;
+Ok
+Witnesses
+Positive: 1 Negative: 0
+Condition ~exists ([x]=0 \/ [x]=1)
+Observation coWW-sna-faddrlx-none Never 0 1
+Hash=cb7ba25964d76914d90d9e19da19f113
+

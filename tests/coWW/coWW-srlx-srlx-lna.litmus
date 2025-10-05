@@ -1,0 +1,14 @@
+C coWW-srlx-srlx-lna
+{ [x] = 0; }
+
+P0 (int* x) {
+  atomic_store_explicit(x, 1, memory_order_relaxed);
+  atomic_store_explicit(x, 2, memory_order_relaxed);
+}
+
+
+P1 (int* x) {
+  *x;
+}
+
+~exists ([x]=0 \/ [x]=1)

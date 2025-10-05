@@ -1,9 +1,14 @@
-C coWW-sna-sna.litmus
+C coWW-sna-sna-lna
 { [x] = 0; }
 
 P0 (int* x) {
   *x = 1;
   *x = 2;
+}
+
+
+P1 (int* x) {
+  *x;
 }
 
 ~exists ([x]=0 \/ [x]=1)
