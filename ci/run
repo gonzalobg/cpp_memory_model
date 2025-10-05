@@ -11,9 +11,21 @@ fi
 
 CONF=model/${MODEL}.cfg
 
-for f in `find tests -name "*.litmus" -type f`; do
-    herd7  -o ${OUT} -conf ${CONF} -timeout none ${f} &> ${f}.expected &
-done
+if [ ${MODEL} = "multi" ]; then
+    CONF=model/cpp17.cfg
+    CONF11=model/cpp11.cfg
+    for f in `find tests -name "*.litmus" -type f`; do
+	if [[ ${f} == *"cpp11"* ]]; then
+	    herd7  -o ${OUT} -conf ${CONF11} -timeout none ${f} &> ${f}.expected &
+	else
+	    herd7  -o ${OUT} -conf ${CONF} -timeout none ${f} &> ${f}.expected &
+	fi
+    done
+else
+    for f in `find tests -name "*.litmus" -type f`; do
+	herd7  -o ${OUT} -conf ${CONF} -timeout none ${f} &> ${f}.expected &
+    done
+fi
 
 wait
 
