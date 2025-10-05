@@ -1,0 +1,13 @@
+Test coRW-faddrlx-sna-faddrlx Forbidden
+States 3
+0:a=0; [x]=1;
+0:a=0; [x]=3;
+0:a=2; [x]=1;
+Undef
+Witnesses
+Positive: 3 Negative: 0
+Flag *undef*
+Condition ~exists (0:a=2 /\ [x]=2)
+Observation coRW-faddrlx-sna-faddrlx Never 0 3
+Hash=8a6461690fd90ceaff21221f7b5559de
+

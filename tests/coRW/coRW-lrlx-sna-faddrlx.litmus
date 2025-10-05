@@ -1,13 +1,13 @@
-C coRW-lrlx-srlx-srlx
+C coRW-lrlx-sna-faddrlx
 { [x] = 0; }
 
 P0 (int* x) {
   int a = atomic_load_explicit(x, memory_order_relaxed);
-  atomic_store_explicit(x, 1, memory_order_relaxed);
+  *x = 1;
 }
 
 P1 (int* x) {
-  atomic_store_explicit(x, 2, memory_order_relaxed);
+  atomic_fetch_add_explicit(x, 2, memory_order_relaxed);
 }
 
 ~exists (0:a=2 /\ [x]=2)

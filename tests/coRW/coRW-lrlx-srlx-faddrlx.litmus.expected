@@ -1,0 +1,12 @@
+Test coRW-lrlx-srlx-faddrlx Forbidden
+States 3
+0:a=0; [x]=1;
+0:a=0; [x]=3;
+0:a=2; [x]=1;
+Ok
+Witnesses
+Positive: 3 Negative: 0
+Condition ~exists (0:a=2 /\ [x]=2)
+Observation coRW-lrlx-srlx-faddrlx Never 0 3
+Hash=e57a9aca88ffdc7dfd8444c42515d35b
+

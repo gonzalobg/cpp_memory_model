@@ -1,9 +1,9 @@
-C coRW-lrlx-srlx-srlx
+C coRW-lrlx-sna-srlx
 { [x] = 0; }
 
 P0 (int* x) {
   int a = atomic_load_explicit(x, memory_order_relaxed);
-  atomic_store_explicit(x, 1, memory_order_relaxed);
+  *x = 1;
 }
 
 P1 (int* x) {
