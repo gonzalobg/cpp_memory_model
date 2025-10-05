@@ -1,0 +1,12 @@
+Test lb-lna-faddrlx-lacq-sna-racy Allowed
+States 2
+0:b=0;
+0:b=1;
+Undef
+Witnesses
+Positive: 1 Negative: 2
+Flag *undef*
+Condition exists (0:b=1)
+Observation lb-lna-faddrlx-lacq-sna-racy Sometimes 1 2
+Hash=743b29cb5701315814cdca54a0baa8bb
+

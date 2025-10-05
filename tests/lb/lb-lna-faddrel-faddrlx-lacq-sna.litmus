@@ -1,0 +1,17 @@
+C lb-lna-faddrel-faddrlx-lacq-sna
+{ [x] = 0; [y] = 0;  }
+
+P0 (int* x, int* y) {
+  int b = *y;
+  atomic_fetch_add_explicit(x, 1, memory_order_release);
+  atomic_fetch_add_explicit(x, 1, memory_order_relaxed);
+}
+
+P1 (int* x, int* y) {
+  int a = atomic_load_explicit(x, memory_order_acquire);
+  if (a != 0) {
+    *y = 1;
+  }
+}
+
+~exists(0:b=1)

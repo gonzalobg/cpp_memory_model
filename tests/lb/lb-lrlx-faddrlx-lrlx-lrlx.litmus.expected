@@ -1,0 +1,11 @@
+Test lb-lrlx-faddrlx-lrlx-srlx Allowed
+States 2
+0:b=0;
+0:b=1;
+Ok
+Witnesses
+Positive: 1 Negative: 2
+Condition exists (0:b=1)
+Observation lb-lrlx-faddrlx-lrlx-srlx Sometimes 1 2
+Hash=4571ba539f40e692d69466f929c79068
+
