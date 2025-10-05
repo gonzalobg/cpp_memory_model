@@ -1,0 +1,16 @@
+C lb-lna-lna-sna-sna-racy
+{ [x] = 0; [y] = 0;  }
+
+P0 (int* x, int* y) {
+  int b = *y;
+  *x = 1;
+}
+
+P1 (int* x, int* y) {
+  int a = *x;
+  if (a == 1) {
+    *y = 1;
+  }
+}
+
+exists(0:b=1)
