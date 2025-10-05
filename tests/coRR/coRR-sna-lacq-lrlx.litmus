@@ -1,0 +1,15 @@
+C coRR-sna-lacq-lrlx
+{ [x] = 0; }
+
+P0 (int* x) {
+  *x = 1;
+}
+
+P1 (int* x) {
+  int a = atomic_load_explicit(x, memory_order_acquire);
+  if (a == 1) {
+    int b = atomic_load_explicit(x, memory_order_relaxed);
+  }
+}
+
+~exists (1:a=1 /\ 1:b=0)

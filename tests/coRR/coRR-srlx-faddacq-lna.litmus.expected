@@ -1,0 +1,12 @@
+Test coRR-srlx-faddacq-lna Forbidden
+States 2
+1:a=0; 1:b=0;
+1:a=1; 1:b=1;
+Undef
+Witnesses
+Positive: 2 Negative: 0
+Flag *undef*
+Condition ~exists (1:a=1 /\ 1:b=0)
+Observation coRR-srlx-faddacq-lna Never 0 2
+Hash=cdeebac079e72d8440f6ac5c23523753
+

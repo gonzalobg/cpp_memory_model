@@ -1,0 +1,11 @@
+Test coRR-srel-lrlx-facq-faddrlx Forbidden
+States 2
+1:a=0; 1:b=0;
+1:a=1; 1:b=1;
+Ok
+Witnesses
+Positive: 2 Negative: 0
+Condition ~exists (1:a=1 /\ 1:b=0)
+Observation coRR-srel-lrlx-facq-faddrlx Never 0 2
+Hash=2287fb70ca1a98ab9042ca7ec8a59a2a
+

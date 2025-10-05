@@ -1,0 +1,15 @@
+C coRR-srel-faddacq-faddrlx
+{ [x] = 0; }
+
+P0 (int* x) {
+  atomic_store_explicit(x, 1, memory_order_release);
+}
+
+P1 (int* x) {
+  int a = atomic_fetch_add_explicit(x, 0, memory_order_acquire);
+  if (a == 1) {
+    int b = atomic_fetch_add_explicit(x, 0, memory_order_relaxed);
+  }
+}
+
+~exists (1:a=1 /\ 1:b=0)

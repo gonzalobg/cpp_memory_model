@@ -1,0 +1,12 @@
+Test coRR-sna-lna-lrlx Forbidden
+States 2
+1:a=0; 1:b=0;
+1:a=1; 1:b=1;
+Undef
+Witnesses
+Positive: 2 Negative: 0
+Flag *undef*
+Condition ~exists (1:a=1 /\ 1:b=0)
+Observation coRR-sna-lna-lrlx Never 0 2
+Hash=9101e9eaae5453e1edf47d4970e70158
+

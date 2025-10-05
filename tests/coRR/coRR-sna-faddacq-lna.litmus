@@ -1,0 +1,15 @@
+C coRR-sna-faddacq-lna
+{ [x] = 0; }
+
+P0 (int* x) {
+  *x = 1;
+}
+
+P1 (int* x) {
+  int a = atomic_fetch_add_explicit(x, 0, memory_order_acquire);
+  if (a == 1) {
+    int b = *x;
+  }
+}
+
+~exists (1:a=1 /\ 1:b=0)

@@ -1,0 +1,15 @@
+C coRR-srlx-lrlx-lna
+{ [x] = 0; }
+
+P0 (int* x) {
+  atomic_store_explicit(x, 1, memory_order_relaxed);
+}
+
+P1 (int* x) {
+  int a = atomic_load_explicit(x, memory_order_relaxed);
+  if (a == 1) {
+    int b = *x;
+  }
+}
+
+~exists (1:a=1 /\ 1:b=0)
