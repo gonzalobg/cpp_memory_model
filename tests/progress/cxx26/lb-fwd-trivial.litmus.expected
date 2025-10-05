@@ -1,1 +1,1 @@
-Warning: File "tests/gonzalo/progress/lb-fwd-cpp26.litmus", line 6, characters 12-13: unexpected '}' (in prog) (User error)
+Warning: File "tests/progress/cxx26/lb-fwd-trivial.litmus", line 6, characters 12-13: unexpected '}' (in prog) (User error)

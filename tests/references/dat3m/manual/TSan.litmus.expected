@@ -1,1 +1,1 @@
-Warning: File "tests/dat3m/manual/TSan.litmus", line 12, characters 109-110: unexpected '}' (in prog) (User error)
+Warning: File "tests/references/dat3m/manual/TSan.litmus", line 12, characters 109-110: unexpected '}' (in prog) (User error)

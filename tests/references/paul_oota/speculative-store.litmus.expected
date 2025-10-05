@@ -1,1 +1,1 @@
-Warning: File "tests/paul_oota/speculative-store.litmus", line 7, characters 7-8: unexpected '{' (in init) (User error)
+Warning: File "tests/references/paul_oota/speculative-store.litmus", line 7, characters 7-8: unexpected '{' (in init) (User error)
