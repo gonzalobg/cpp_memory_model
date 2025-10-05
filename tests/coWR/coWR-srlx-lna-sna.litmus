@@ -1,0 +1,13 @@
+C coWR-srlx-lna-sna
+{ [x] = 0; }
+
+P0 (int* x) {
+  atomic_store_explicit(x, 1, memory_order_relaxed);
+  int a = *x;
+}
+
+P1 (int* x) {
+  *x = 2;
+}
+
+~exists (0:a=2 /\ [x]=1)

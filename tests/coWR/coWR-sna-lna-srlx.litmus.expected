@@ -1,0 +1,13 @@
+Test coWR-sna-lna-srlx Forbidden
+States 3
+0:a=1; [x]=1;
+0:a=1; [x]=2;
+0:a=2; [x]=2;
+Undef
+Witnesses
+Positive: 3 Negative: 0
+Flag *undef*
+Condition ~exists (0:a=2 /\ [x]=1)
+Observation coWR-sna-lna-srlx Never 0 3
+Hash=486b7e78ddb8bdf4a7e6c9ce86abd136
+

@@ -1,0 +1,13 @@
+C coWR-sna-lna-faddrlx
+{ [x] = 0; }
+
+P0 (int* x) {
+  *x = 1;
+  int a = *x;
+}
+
+P1 (int* x) {
+  atomic_fetch_add_explicit(x, 2, memory_order_relaxed);
+}
+
+~exists (0:a=2 /\ [x]=1)

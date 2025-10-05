@@ -1,0 +1,13 @@
+Test coWR-sna-faddrlx-faddrlx Forbidden
+States 3
+0:a=1; [x]=1;
+0:a=1; [x]=3;
+0:a=3; [x]=3;
+Undef
+Witnesses
+Positive: 3 Negative: 0
+Flag *undef*
+Condition ~exists (0:a=2 /\ [x]=1)
+Observation coWR-sna-faddrlx-faddrlx Never 0 3
+Hash=d29bda6a56744e733e5aa10b3daea03d
+

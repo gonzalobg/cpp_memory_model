@@ -1,4 +1,4 @@
-C coWR-srlx-lrlx-srlx
+C coWR-srlx-lrlx-sna
 { [x] = 0; }
 
 P0 (int* x) {
@@ -7,7 +7,7 @@ P0 (int* x) {
 }
 
 P1 (int* x) {
-  atomic_store_explicit(x, 2, memory_order_relaxed);
+  *x = 2;
 }
 
 ~exists (0:a=2 /\ [x]=1)
