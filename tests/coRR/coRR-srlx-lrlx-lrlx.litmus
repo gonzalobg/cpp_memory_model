@@ -1,4 +1,4 @@
-C coRR
+C coRR-srlx-lrlx-lrlx
 { [x] = 0; }
 
 P0 (int* x) {

@@ -1,8 +1,8 @@
-C coRR-srel-lacq-na.litmus
+C coRR-faddrel-lacq-na.litmus
 { [x] = 0; }
 
 P0 (int* x) {
-  atomic_store_explicit(x, 1, memory_order_release);
+  atomic_fetch_add_explicit(x, 1, memory_order_release);
 }
 
 P1 (int* x) {
