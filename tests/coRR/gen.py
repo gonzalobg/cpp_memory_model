@@ -24,6 +24,9 @@ s0s = {
     'srel': 'atomic_store_explicit(x, 1, memory_order_release)',
     'faddrlx': 'atomic_fetch_add_explicit(x, 1, memory_order_relaxed)',
     'faddrel': 'atomic_fetch_add_explicit(x, 1, memory_order_release)',
+    # TODO: waiting for Dartagnang store-add support
+    #'saddrlx': 'atomic_store_add_explicit(x, 1, memory_order_relaxed)',
+    #'saddrel': 'atomic_store_add_explicit(x, 1, memory_order_release)',
     'sna': '*x = 1',
 }
 

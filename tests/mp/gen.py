@@ -43,20 +43,32 @@ s1s = {
     'frel-2faddrlx': 'atomic_thread_fence(memory_order_release);\n  atomic_fetch_add_explicit(y, 1, memory_order_relaxed);\n  atomic_fetch_add_explicit(y, 1, memory_order_relaxed)',
     'frel-srlx-faddrlx': 'atomic_thread_fence(memory_order_release);\n  atomic_store_explicit(y, 1, memory_order_relaxed);\n  atomic_fetch_add_explicit(y, 1, memory_order_relaxed)',
     'frel-faddrlx-srlx': 'atomic_thread_fence(memory_order_release);\n  atomic_fetch_add_explicit(y, 1, memory_order_relaxed);\n  atomic_store_explicit(y, 2, memory_order_relaxed)',
+    # TODO: waiting for Dartagnang store-add support
+    #'frel-saddrlx': 'atomic_thread_fence(memory_order_release);\n  atomic_store_add_explicit(y, 1, memory_order_relaxed)',
+    #'frel-2saddrlx': 'atomic_thread_fence(memory_order_release);\n  atomic_store_add_explicit(y, 1, memory_order_relaxed);\n  atomic_store_add_explicit(y, 1, memory_order_relaxed)',
+    #'frel-srlx-saddrlx': 'atomic_thread_fence(memory_order_release);\n  atomic_store_explicit(y, 1, memory_order_relaxed);\n  atomic_store_add_explicit(y, 1, memory_order_relaxed)',
+    #'frel-saddrlx-srlx': 'atomic_thread_fence(memory_order_release);\n  atomic_store_add_explicit(y, 1, memory_order_relaxed);\n  atomic_store_explicit(y, 2, memory_order_relaxed)',
 
     # Release Patterns with operations
     'srel': 'atomic_store_explicit(y, 1, memory_order_release)',
     'faddrel': 'atomic_fetch_add_explicit(y, 1, memory_order_release)',
+    # TODO: waiting for Dartagnang store-add support
+    #'saddrel': 'atomic_store_add_explicit(y, 1, memory_order_release)',
 
     # Release Patterns with Release Sequences:
     'srel-faddrlx': 'atomic_store_explicit(y, 1, memory_order_release);\n  atomic_fetch_add_explicit(y, 1, memory_order_relaxed)',
     'faddrel-faddrlx': 'atomic_fetch_add_explicit(y, 1, memory_order_release);\n  atomic_fetch_add_explicit(y, 1, memory_order_relaxed)',
+    # TODO: waiting for Dartagnang store-add support
+    #'srel-saddrlx': 'atomic_store_explicit(y, 1, memory_order_release);\n  atomic_store_add_explicit(y, 1, memory_order_relaxed)',
+    #'saddrel-faddrlx': 'atomic_store_add_explicit(y, 1, memory_order_release);\n  atomic_store_add_explicit(y, 1, memory_order_relaxed)',
 
     # Release Patterns with Release Sequences: pre-C++17
     'srel-srlx': 'atomic_store_explicit(y, 1, memory_order_release);\n  atomic_store_explicit(y, 2, memory_order_relaxed)',
 
     # Not a Release Sequence in C++:
     'faddrel-srlx': 'atomic_fetch_add_explicit(y, 1, memory_order_release);\n  atomic_store_explicit(y, 2, memory_order_relaxed)',
+    # TODO: waiting for Dartagnang store-add support
+    #'saddrel-srlx': 'atomic_store_add_explicit(y, 1, memory_order_release);\n  atomic_store_explicit(y, 2, memory_order_relaxed)',
 }
 
 l0s = {
