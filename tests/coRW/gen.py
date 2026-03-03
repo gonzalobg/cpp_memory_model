@@ -29,6 +29,8 @@ s0s = {
 s1s = {
     'srlx': 'atomic_store_explicit(x, 2, memory_order_relaxed)',
     'faddrlx': 'atomic_fetch_add_explicit(x, 2, memory_order_relaxed)',
+    # TODO: waiting for Dartagnang store-add support
+    #'saddrlx': 'atomic_store_add_explicit(x, 2, memory_order_relaxed)',
 }
 
 for l0, s0, s1 in product(l0s, s0s, s1s):
