@@ -27,7 +27,7 @@ let pscb = ([SC] | [F & SC]; hb?); scb; ([SC] | hb? ; [F & SC])
 let pscf = [F & SC]; (hb | hb; eco; hb); [F & SC]
 let psc = pscb | pscf
 
-let tecotsb = ([A]; (eco); [A])+; sb
+let tecotsb = ([A]; (eco); [A \ NORETURN])+; sb
 
 let cnf = ((W * _) | (_ * W)) & loc \ ((IW * _) | (_ * IW))
 let dr = (cnf & ext) \ (hb | hb^-1 | A * A | tecotsb | tecotsb^-1)
