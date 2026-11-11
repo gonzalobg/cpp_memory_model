@@ -3,14 +3,15 @@ C lb-fwd-trivial-inf-loopp
 
 P0 (int* x, int* y) {
   int r0 = atomic_load_explicit(x, memory_order_relaxed);
-  while(1) {}  // well-defined
+  while(1 == 1) {} // while(1);
   atomic_store_explicit(y, 1, memory_order_relaxed);
 }
 
 P1 (int* x, int* y) {
   int r1 = atomic_load_explicit(y, memory_order_relaxed);
-  while(1) {}  // well-defined
+  while(1 == 1) {} // while(1);
   atomic_store_explicit(x, 1, memory_order_relaxed);
 }
 
-exists([x]=1) well-defined, forbidden
+// well-defined, forbidden
+exists([x]=1)

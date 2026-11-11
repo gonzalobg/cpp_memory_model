@@ -11,4 +11,5 @@ P1 (int* x, int* y) {
   atomic_store_explicit(x, 1, memory_order_relaxed);
 }
 
-exists([x]=1) // well-defined and forbidden
+// well-defined and forbidden
+exists([x]=1)
