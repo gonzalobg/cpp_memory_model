@@ -1,6 +1,6 @@
 Test oota-3-2-proc-opt Allowed
 States 2
-0:r1=S10; 1:r2=S10; 1:r3=0; [x]=S10; [y]=S10; [z]=S10;
+0:r1=S8; 1:r2=S8; 1:r3=0; [x]=S8; [y]=S8; [z]=S8;
 0:r1=0; 1:r2=0; 1:r3=0; [x]=0; [y]=0; [z]=0;
 No
 Witnesses
