@@ -1,0 +1,12 @@
+Test mp-faddrlx-srel-srlx-saddrlx-facq-lna-undef Required
+States 2
+1:b=0;
+1:b=1;
+Undef
+Witnesses
+Positive: 2 Negative: 0
+Flag *undef*
+Condition forall (1:b=0 \/ 1:b=1)
+Observation mp-faddrlx-srel-srlx-saddrlx-facq-lna-undef Always 2 0
+Hash=0869182a1d9954746dbc0711d977a9fc
+

@@ -1,0 +1,12 @@
+Test mp-faddrlx-frel-saddrlx-srlx-faddrlx-facq-lna Forbidden
+States 3
+1:a=0; 1:b=0;
+1:a=1; 1:b=1;
+1:a=2; 1:b=1;
+Ok
+Witnesses
+Positive: 3 Negative: 0
+Condition ~exists (not (1:a=0) /\ 1:b=0)
+Observation mp-faddrlx-frel-saddrlx-srlx-faddrlx-facq-lna Never 0 3
+Hash=92cfbaf1a34693f74ac2449d0ad8cd6e
+

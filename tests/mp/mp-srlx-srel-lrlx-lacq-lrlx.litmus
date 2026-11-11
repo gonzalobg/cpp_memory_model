@@ -9,8 +9,9 @@ P0 (int* x, int* y) {
 P1 (int* x, int* y) {
   int a = atomic_load_explicit(y, memory_order_relaxed);
   int c = atomic_load_explicit(y, memory_order_acquire);
+  int b = 0;
   if (a != 0) {
-    int b = atomic_load_explicit(x, memory_order_relaxed);
+    b = atomic_load_explicit(x, memory_order_relaxed);
   }
 }
 

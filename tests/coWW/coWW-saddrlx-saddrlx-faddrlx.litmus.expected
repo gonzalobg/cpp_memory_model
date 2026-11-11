@@ -1,0 +1,10 @@
+Test coWW-saddrlx-saddrlx-faddrlx Forbidden
+States 1
+[x]=2;
+Ok
+Witnesses
+Positive: 3 Negative: 0
+Condition ~exists ([x]=0 \/ [x]=1)
+Observation coWW-saddrlx-saddrlx-faddrlx Never 0 3
+Hash=70b6eb5d17183c344673b69d74797857
+

@@ -19,8 +19,7 @@ P1 (int* x) {{
 s0s = {
     'srlx': 'atomic_store_explicit(x, 1, memory_order_relaxed)',
     'faddrlx': 'atomic_fetch_add_explicit(x, 1, memory_order_relaxed)',
-    # TODO: waiting for Dartagnang store-add support
-    #'saddrlx': 'atomic_store_add_explicit(x, 1, memory_order_relaxed)',
+    'saddrlx': 'atomic_store_add_explicit(x, 1, memory_order_relaxed)',
     'sna': '*x = 1',
 }
 
@@ -33,8 +32,7 @@ l0s = {
 s1s = {
     'srlx': 'atomic_store_explicit(x, 2, memory_order_relaxed)',
     'faddrlx': 'atomic_fetch_add_explicit(x, 2, memory_order_relaxed)',
-    # TODO: waiting for Dartagnang store-add support
-    #'saddrlx': 'atomic_store_add_explicit(x, 2, memory_order_relaxed)',
+    'saddrlx': 'atomic_store_add_explicit(x, 2, memory_order_relaxed)',
     'sna': '*x = 2',
 }
 

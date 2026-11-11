@@ -1,0 +1,14 @@
+C coWW-saddrlx-sna-lna-undef
+{ [x] = 0; }
+
+P0 (int* x) {
+  atomic_store_add_explicit(x, 1, memory_order_relaxed);
+  *x = 2;
+}
+
+
+P1 (int* x) {
+  *x;
+}
+
+~exists ([x]=0 \/ [x]=1)

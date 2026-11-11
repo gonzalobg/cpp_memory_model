@@ -1,0 +1,13 @@
+Test coRW-lrlx-sna-saddrlx-undef Forbidden
+States 3
+0:a=0; [x]=1;
+0:a=0; [x]=3;
+0:a=2; [x]=1;
+Undef
+Witnesses
+Positive: 3 Negative: 0
+Flag *undef*
+Condition ~exists (0:a=2 /\ [x]=2)
+Observation coRW-lrlx-sna-saddrlx-undef Never 0 3
+Hash=ad9050cb56bc420094ccad03115a5b76
+

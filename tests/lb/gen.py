@@ -52,9 +52,8 @@ s0s = {
 
     # Release Patterns with Release Sequences: pre-C++17
     'srel-srlx': 'atomic_store_explicit(x, 1, memory_order_release);\n  atomic_store_explicit(x, 2, memory_order_relaxed)',
-
-    # Not a Release Sequence in C++:
     'faddrel-srlx': 'atomic_fetch_add_explicit(x, 1, memory_order_release);\n  atomic_store_explicit(x, 2, memory_order_relaxed)',
+
 }
 
 l1s = {
@@ -98,7 +97,7 @@ acquire_sequences = ['lrlx-lacq']
 acquire_patterns = acquire_patterns_no_sequences + acquire_sequences # BUG: lrlx-lacq should not create an acquire pattern
 
 # Pre C++17 release pattenrs include release sequences:
-release_patterns_cpp11 = release_patterns + ['srel-srlx']
+release_patterns_cpp11 = release_patterns + ['srel-srlx', 'faddrel-srlx']
 
 # Test check:
 def check(l0, s0, l1, s1, rel, acq):

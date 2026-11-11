@@ -1,0 +1,12 @@
+Test mp-srlx-saddrel-saddrlx-lrlx-lacq-lna Forbidden
+States 3
+1:a=0; 1:b=0;
+1:a=1; 1:b=1;
+1:a=2; 1:b=1;
+Ok
+Witnesses
+Positive: 6 Negative: 0
+Condition ~exists (not (1:a=0) /\ 1:b=0)
+Observation mp-srlx-saddrel-saddrlx-lrlx-lacq-lna Never 0 6
+Hash=eddbced3cdcdd71a7cd86d61cc983b6e
+

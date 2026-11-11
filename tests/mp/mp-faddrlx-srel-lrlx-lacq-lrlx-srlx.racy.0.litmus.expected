@@ -1,0 +1,11 @@
+Test mp-faddrlx-srel-lrlx-lacq-lrlx-racy-0 Allowed
+States 2
+1:b=0;
+1:b=1;
+Ok
+Witnesses
+Positive: 10 Negative: 3
+Condition exists (1:b=0)
+Observation mp-faddrlx-srel-lrlx-lacq-lrlx-racy-0 Sometimes 10 3
+Hash=b5e84e78de9ce5cbf2fad6678ba72547
+

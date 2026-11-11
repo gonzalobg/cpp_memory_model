@@ -1,0 +1,12 @@
+Test coRR-saddrlx-faddrlx-facq-lna-undef Forbidden
+States 2
+1:a=0; 1:b=0;
+1:a=1; 1:b=1;
+Undef
+Witnesses
+Positive: 2 Negative: 0
+Flag *undef*
+Condition ~exists (1:a=1 /\ 1:b=0)
+Observation coRR-saddrlx-faddrlx-facq-lna-undef Never 0 2
+Hash=f86444862acac0372e6ea25fbeae4824
+

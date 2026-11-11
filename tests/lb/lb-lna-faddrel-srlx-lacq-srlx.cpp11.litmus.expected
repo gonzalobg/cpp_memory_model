@@ -1,0 +1,10 @@
+Test lb-lna-faddrel-srlx-lacq-srlx-cpp11 Forbidden
+States 1
+0:a=0;
+Ok
+Witnesses
+Positive: 3 Negative: 0
+Condition ~exists (0:a=1)
+Observation lb-lna-faddrel-srlx-lacq-srlx-cpp11 Never 0 3
+Hash=2bdd49a02c569af030511c027421b438
+

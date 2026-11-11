@@ -1,11 +1,1 @@
-Test mp-faddrlx-frel-srlx-lrlx-lacq-faddrlx-racy Required
-States 2
-1:b=0;
-1:b=1;
-Ok
-Witnesses
-Positive: 13 Negative: 0
-Condition forall (1:b=0 \/ 1:b=1)
-Observation mp-faddrlx-frel-srlx-lrlx-lacq-faddrlx-racy Always 13 0
-Hash=1e42b1684c3b9c215ccd97297b6306eb
-
+./ci/run: line 21: herd7: command not found
