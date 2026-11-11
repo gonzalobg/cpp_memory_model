@@ -1,0 +1,11 @@
+Test mp-faddrlx-saddrel-faddacq-lna Forbidden
+States 2
+1:a=0; 1:b=0;
+1:a=1; 1:b=1;
+Ok
+Witnesses
+Positive: 2 Negative: 0
+Condition ~exists (not (1:a=0) /\ 1:b=0)
+Observation mp-faddrlx-saddrel-faddacq-lna Never 0 2
+Hash=8b6e45f9b5cf9a7948dd744065f79167
+

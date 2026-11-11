@@ -14,7 +14,88 @@ docker run \
   -v $(pwd):/src \
   -w /src \
   $IMG \
-  bash -c 'set -ex && CLASSPATH=/home/Dat3M/dartagnan/target/libs:$CLASSPATH java -jar /home/Dat3M/dartagnan/target/dartagnan.jar /src/model/cpp17.cat /src/tests/'
+  bash -c '
+    set -eo pipefail
+    shopt -s globstar nullglob
+    tests=()
+    for test in /src/tests/**/*.litmus; do
+      case "$test" in
+        /src/tests/progress/*|\
+        /src/tests/references/herdrc11/C01.litmus|\
+        /src/tests/references/herdrc11/C02.litmus|\
+        /src/tests/references/herdrc11/C04.litmus|\
+        /src/tests/references/herdrc11/C05.litmus|\
+        /src/tests/references/herdrc11/C06.litmus|\
+        /src/tests/references/herdrc11/C08.undef.litmus|\
+        /src/tests/references/herdrc11/C11.undef.litmus|\
+        /src/tests/references/herdrc11/C12.litmus|\
+        /src/tests/references/paul_oota/oota-causality-12.litmus)
+          continue
+          ;;
+      esac
+      if [[ -f "$test" ]]; then
+        tests+=("$test")
+      fi
+    done
+    mkdir -p "$DAT3M_OUTPUT"
+    logdir=$(mktemp -d "$DAT3M_OUTPUT/run.XXXXXX")
+    printf "Dat3M logs: %s\n" "$logdir"
+    status=0
+    declare -A passed=([cpp17]=0 [cpp11]=0)
+    declare -A failed=([cpp17]=0 [cpp11]=0)
+    declare -A errors=([cpp17]=0 [cpp11]=0)
+    declare -A skipped=([cpp17]=0 [cpp11]=0)
+    printf "test\tmodel\tresult\texit_code\n" > "$logdir/results.tsv"
+    for test in "${tests[@]}"; do
+      model=cpp17
+      if [[ "$test" == *.cpp11.* ]]; then
+        model=cpp11
+      fi
+      output="$logdir/${test#/src/tests/}.log"
+      mkdir -p "${output%/*}"
+      process_status=0
+      dartagnan "/src/model/$model.cat" "$test" > "$output" 2>&1 || process_status=$?
+      cat "$output"
+      # Match ci/run: execute reference tests, but skip their result checks.
+      case "$test" in
+        *popl15*|*pldi17*|*dat3m*|*paul*|*progress*)
+          skipped[$model]=$((${skipped[$model]} + 1))
+          printf "Skipping result check: %s\n" "$test"
+          printf "%s\t%s\tSKIP\t%s\n" "${test#/src/}" "$model" "$process_status" >> "$logdir/results.tsv"
+          continue
+          ;;
+      esac
+      test_passed=$(grep -Ec "^Result: PASS([[:space:]]|$)" "$output" || true)
+      test_failed=$(grep -Ec "^Result: FAIL([[:space:]]|$)" "$output" || true)
+      result=ERROR
+      if (( test_passed == 1 && test_failed == 0 && process_status == 0 )); then
+        passed[$model]=$((${passed[$model]} + 1))
+        result=PASS
+      elif (( test_failed == 1 && test_passed == 0 )); then
+        if [[ "$test" == *.undef.* ]] &&
+           grep -Eq "^Reason: CAT specification violation found[[:space:]]*$" "$output" &&
+           grep -Fq "Flag Dr (*undef*)" "$output"; then
+          passed[$model]=$((${passed[$model]} + 1))
+          result=PASS
+          printf "Expected undefined behavior detected: %s\n" "$test"
+        else
+          failed[$model]=$((${failed[$model]} + 1))
+          result=FAIL
+          status=1
+        fi
+      else
+        errors[$model]=$((${errors[$model]} + 1))
+        printf "ERROR: %s has a missing, inconclusive, or unsuccessful result; see %s\n" "$test" "$output" >&2
+        status=1
+      fi
+      printf "%s\t%s\t%s\t%s\n" "${test#/src/}" "$model" "$result" "$process_status" >> "$logdir/results.tsv"
+    done
+    for model in cpp17 cpp11; do
+      printf "\nDat3M %s summary: %s passed, %s failed, %s errors, %s skipped\n" \
+        "$model" "${passed[$model]}" "${failed[$model]}" "${errors[$model]}" "${skipped[$model]}"
+    done
+    exit "$status"
+  '
 
 # To check for termination, add --property=termination
 

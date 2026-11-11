@@ -1,0 +1,11 @@
+Test lb-faddrlx-faddrel-srlx-faddrlx-faddrlx-cpp11-racy Required
+States 2
+0:a=0;
+0:a=1;
+Ok
+Witnesses
+Positive: 5 Negative: 0
+Condition forall (0:a=0 \/ 0:a=1)
+Observation lb-faddrlx-faddrel-srlx-faddrlx-faddrlx-cpp11-racy Always 5 0
+Hash=e99a01abf511631e8ee6f10ef38d4d2e
+

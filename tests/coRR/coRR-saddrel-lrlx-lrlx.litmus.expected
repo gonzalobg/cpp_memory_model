@@ -1,0 +1,11 @@
+Test coRR-saddrel-lrlx-lrlx Forbidden
+States 2
+1:a=0; 1:b=0;
+1:a=1; 1:b=1;
+Ok
+Witnesses
+Positive: 2 Negative: 0
+Condition ~exists (1:a=1 /\ 1:b=0)
+Observation coRR-saddrel-lrlx-lrlx Never 0 2
+Hash=616451c5b533c7a199e6c37d2c3fb230
+

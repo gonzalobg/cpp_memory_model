@@ -1,0 +1,12 @@
+Test lb-lna-faddrel-srlx-faddrlx-faddrlx-cpp11-undef Required
+States 2
+0:a=0;
+0:a=1;
+Undef
+Witnesses
+Positive: 5 Negative: 0
+Flag *undef*
+Condition forall (0:a=0 \/ 0:a=1)
+Observation lb-lna-faddrel-srlx-faddrlx-faddrlx-cpp11-undef Always 5 0
+Hash=cc10e459c9c0b8f6235bec0a980de3e2
+

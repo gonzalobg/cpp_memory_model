@@ -1,0 +1,12 @@
+Test coWR-saddrlx-lrlx-srlx Forbidden
+States 3
+0:a=1; [x]=2;
+0:a=2; [x]=2;
+0:a=3; [x]=3;
+Ok
+Witnesses
+Positive: 3 Negative: 0
+Condition ~exists (0:a=2 /\ [x]=1)
+Observation coWR-saddrlx-lrlx-srlx Never 0 3
+Hash=3c09ba4ef2b4c5ffb4fff75c608902b3
+

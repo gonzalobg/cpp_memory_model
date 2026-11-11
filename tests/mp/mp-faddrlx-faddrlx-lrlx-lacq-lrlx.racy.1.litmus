@@ -1,0 +1,18 @@
+C mp-faddrlx-faddrlx-lrlx-lacq-lrlx-racy-1
+{ [x] = 0; [y] = 0; }
+
+P0 (int* x, int* y) {
+  atomic_fetch_add_explicit(x, 1, memory_order_relaxed);
+  atomic_fetch_add_explicit(y, 1, memory_order_relaxed);
+}
+
+P1 (int* x, int* y) {
+  int a = atomic_load_explicit(y, memory_order_relaxed);
+  int c = atomic_load_explicit(y, memory_order_acquire);
+  int b = 0;
+  if (a != 0) {
+    b = atomic_load_explicit(x, memory_order_relaxed);
+  }
+}
+
+exists(1:b=1)

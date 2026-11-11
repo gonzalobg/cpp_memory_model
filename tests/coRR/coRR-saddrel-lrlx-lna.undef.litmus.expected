@@ -1,0 +1,12 @@
+Test coRR-saddrel-lrlx-lna-undef Forbidden
+States 2
+1:a=0; 1:b=0;
+1:a=1; 1:b=1;
+Undef
+Witnesses
+Positive: 2 Negative: 0
+Flag *undef*
+Condition ~exists (1:a=1 /\ 1:b=0)
+Observation coRR-saddrel-lrlx-lna-undef Never 0 2
+Hash=4592cbeb7dd1dd94d7d136ce021719d6
+

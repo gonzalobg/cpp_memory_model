@@ -23,7 +23,7 @@ if [ ${MODEL} = "multi" ]; then
 	# Too many concurrent processes limit:
 	COUNT=$(($COUNT + 1))
 	if ! (($COUNT % 1000)); then
-	    sleep 2
+	    sleep 10
 	fi
     done
 else
@@ -32,7 +32,7 @@ else
 	# Too many concurrent processes limit:
 	COUNT=$(($COUNT + 1))
 	if ! (($COUNT % 1000)); then
-	    sleep 2
+	    sleep 10
 	fi
     done
 fi
